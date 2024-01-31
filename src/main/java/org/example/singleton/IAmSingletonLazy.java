@@ -1,5 +1,10 @@
 package org.example.singleton;
 
+/*
+* lazy way of creating singleton.
+* well we have to make it threadsafe as well as we do not want to create any duplicate object.
+* you can use also block level synchronization.
+* */
 public class IAmSingletonLazy {
     private static IAmSingletonLazy iAmSingleTonLazy;
 
@@ -7,7 +12,7 @@ public class IAmSingletonLazy {
 
     }
 
-    public static IAmSingletonLazy getiAmSingletonLazy() {
+    public synchronized static IAmSingletonLazy getiAmSingletonLazy() {
         if (iAmSingleTonLazy == null) {
             iAmSingleTonLazy = new IAmSingletonLazy();
         }
