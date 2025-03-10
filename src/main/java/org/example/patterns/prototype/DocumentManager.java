@@ -11,6 +11,6 @@ public class DocumentManager {
     }
 
     public Document createDocument(DocType key) throws CloneNotSupportedException {
-        return documentTemplate.get(key).clone();
+        return documentTemplate.get(key).bitWiseClone();
     }
 }

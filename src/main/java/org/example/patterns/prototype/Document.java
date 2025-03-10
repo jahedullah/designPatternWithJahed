@@ -1,6 +1,7 @@
 package org.example.patterns.prototype;
 
 public interface Document extends Cloneable{
-    Document clone() throws CloneNotSupportedException;
+    Document bitWiseClone() throws CloneNotSupportedException;
+    Document newClone();
     void printContent();
 }
