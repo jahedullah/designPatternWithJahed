@@ -11,8 +11,9 @@ public class Contract implements Document {
     }
 
     @Override
-    public Document clone() {
-        return new Contract(this.clientName, this.terms);
+    public Document clone() throws CloneNotSupportedException{
+        Object o = super.clone();
+        return (Document) o;
     }
 
     @Override

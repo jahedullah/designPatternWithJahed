@@ -10,8 +10,9 @@ public class Resume implements Document {
     }
 
     @Override
-    public Document clone() {
-        return new Resume(this.clientName, this.terms);
+    public Document clone() throws CloneNotSupportedException {
+        Object o = super.clone();
+        return (Document) o;
     }
 
     @Override

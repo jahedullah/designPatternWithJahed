@@ -3,7 +3,7 @@ package org.example.patterns.prototype;
 import java.util.Objects;
 
 public class PrototypeDocumentDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         DocumentManager documentManager = new DocumentManager();
         documentManager.addTemplate(DocType.CONTRACT, new Contract("Acme Corp", "Standard Terms"));
         documentManager.addTemplate(DocType.RESUME, new Resume("John Doe", "Java, Spring Boot"));
